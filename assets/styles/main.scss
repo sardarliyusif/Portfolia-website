@@ -25,17 +25,8 @@ time, mark, audio, video {
 	text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
   display: block;
 }
 body {
@@ -67,7 +58,8 @@ html{
 }
 body {
     font-size: 10rem;
-    /* ********** HEADER ********* */
+    // HEADERS FOR ALL PAGES
+    /* ********** HEADER (index.html) ********* */
     header {
       display: flex;
       align-items: center;
@@ -112,6 +104,25 @@ body {
         }
       }
     }
+    /* ********** HEADER (except index.html) ********* */
+    .headers{
+      background-image: url("../img/bg.jpeg") !important;
+      height: 50px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      // top: 0;
+      position: static;
+      height: 80px;
+      border-bottom: 2px solid red;
+      .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    /* ******************* INDEX.HTML ********************* */
     .bg-img {
       background-image: url("../img/bg.jpeg");
       height: 100vh;
@@ -130,6 +141,18 @@ body {
           font-weight: 700;
           margin-bottom: 5rem;
         }
+        a{
+          padding: 5rem;
+          background-color: #ddd;
+          border-radius: 4px;
+          color: #000;
+          margin-top: 5rem;
+          transition: all 0.3s;
+          &:hover{
+            background-color: cornflowerblue;
+            color: #fff;
+          }
+        }
       }
       &::before {
         content: "";
@@ -140,5 +163,196 @@ body {
         opacity: 0.3;
       }
     } 
+    /* *********** INTRODUCTION ************ */
+    .introduction{
+      margin-bottom: 30rem;
+      .section-part{
+        padding: 0 15rem;
+        .part-icon{
+          font-size: 25rem;
+          color: red;
+          margin: 15rem 0 5rem 0;
+        }
+        .part-info{
+          p:first-child{
+            color: #000;
+            font-weight: 700;
+            margin-bottom: 5rem;
+          }
+        }
+      }
+    }
+    /* ************ PROFILE ************* */
+    .profile{
+      .section-part{
+        padding: 20rem 0;
+        i{
+          font-size: 30rem;
+        }
+        p,span{
+          font-size: 15rem;
+          margin-top: 5rem;
+        }
+      }
+    }
+    /* ************ WORKING PROCESS */
+    .working-process{
+      .section-part{
+        padding: 0 15rem;
+        i{
+          font-size: 30rem;
+          color: #fff;
+          background-color: #333;
+          padding: 10rem;
+          border-radius: 50%;
+          margin-bottom: 7rem;
+          position: relative;
+          transition: all 0.5s;
+          &::after{
+            content: "1";
+            font-size: 12rem;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: red;
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          &:hover{
+            background-color: red;
+            
+            &::after{
+              transition: all 0.5s;
+              background-color: #333;
+            }
+          }
+        }
+        p{
+          font-weight: 700;
+          margin: 5rem 0;
+        }
+      }
+    }
+    /* ************* FOOTER ************* */
+    footer{
+      padding: 15rem 0;
+      background-color: #333;
+      margin-top: 15rem;
+      .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .foot-left{
+          color: #fff;
+        }
+        .foot-nav{
+          ul{
+            display: flex;
+            
+            i{
+              color: #fff;
+              padding: 5rem;
+              border-radius: 50%;
+              border: 1px solid white;
+              margin-left: 10rem;
+              transition: all 0.3s;
+              &:hover{
+                background-color: red;
+              }
+            }
+          }
+        } 
+      }
+      
+    }
+
+    /* ******************* ABOUT.HTML ********************* */
+    .about-me{
+      .section-parts{
+        .part-1{
+          width: 30%;
+          img{
+            width: 100%;
+          }
+        }
+        .part-2{
+          flex: 1;
+          padding: 10rem 40rem;
+          h5{
+            font-weight: 700;
+            margin-bottom: 5rem;
+          }
+          p{
+            line-height: 1.4;
+          }
+        }
+      }
+    }
+    /* ******************WHAT I KNOW ***************** */
+    .what-i-know {
+      margin-top: 30px;
+      padding: 10rem 0;
+      background-color: #333;
+      .section-title{
+        color: #fff;
+        margin-bottom: 15rem;
+      }
+      p{
+        color: #fff;
+        margin-bottom: 2rem;
+        font-weight: 700;
+      }
+      .progress-bar {
+        margin-bottom: 40px;
+        width: 100%;
+        height: 20px;
+        background-color: #ccc;
+        border-radius: 5px;
+        position: relative;
+      }
+      .web-development{
+        &::before{
+          content: "";
+          position: absolute;
+          z-index: 333;
+          width: 100%;
+          height: 20px;
+          border-radius: 5px;
+          background-color: #ef6d6d;
+          
+        }
+      }
+      .mobile-app::before {
+        content: "";
+        position: absolute;
+        z-index: 333;
+        width: 75%;
+        height: 20px;
+        border-radius: 5px;
+        background: #ef6d6d
+      }
+      .data-science::before {
+        content: "";
+        position: absolute;
+        z-index: 333;
+        width: 55%;
+        height: 20px;
+        border-radius: 5px;
+        background-color: #ef6d6d;
+      }
+      .machine-learning::before {
+        content: "";
+        position: absolute;
+        z-index: 333;
+        width: 85%;
+        height: 20px;
+        border-radius: 5px;
+        background-color: #ef6d6d;
+      }
+    }
 }
 

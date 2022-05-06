@@ -1,6 +1,18 @@
 .container {
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto !important;
+}
+
+.bg-dark-gray {
+  background-color: gray;
+}
+
+.bg-light-gray {
+  background-color: #ddd;
+}
+
+.mt {
+  margin-top: 25rem;
 }
 
 .active::before {
@@ -10,6 +22,10 @@
   height: 2px;
   background-color: red;
   bottom: 0;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .center {
@@ -29,6 +45,47 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.section-title {
+  position: relative;
+}
+
+.section-title h3 {
+  font-size: 20rem;
+  margin: 15rem 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.section-title h3::before {
+  content: "";
+  position: absolute;
+  width: 3%;
+  height: 3px;
+  background-color: red;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.section-info {
+  font-size: 15rem;
+  padding: 10rem 0;
+  letter-spacing: 1px;
+}
+
+.section-parts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-parts .section-part {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 /* ********** RESET CSS ********** */
@@ -58,17 +115,8 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
@@ -106,7 +154,15 @@ html {
 
 body {
   font-size: 10rem;
-  /* ********** HEADER ********* */
+  /* ********** HEADER (index.html) ********* */
+  /* ********** HEADER (except index.html) ********* */
+  /* ******************* INDEX.HTML ********************* */
+  /* *********** INTRODUCTION ************ */
+  /* ************ PROFILE ************* */
+  /* ************ WORKING PROCESS */
+  /* ************* FOOTER ************* */
+  /* ******************* ABOUT.HTML ********************* */
+  /* ******************WHAT I KNOW ***************** */
 }
 
 body header {
@@ -170,6 +226,29 @@ body header .nav-bar ul li:hover::before {
   bottom: 0;
 }
 
+body .headers {
+  background-image: url("../img/bg.jpeg") !important;
+  height: 50px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: static;
+  height: 80px;
+  border-bottom: 2px solid red;
+}
+
+body .headers .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 body .bg-img {
   background-image: url("../img/bg.jpeg");
   height: 100vh;
@@ -193,6 +272,21 @@ body .bg-img .bg-img-body h1, body .bg-img .bg-img-body p {
   margin-bottom: 5rem;
 }
 
+body .bg-img .bg-img-body a {
+  padding: 5rem;
+  background-color: #ddd;
+  border-radius: 4px;
+  color: #000;
+  margin-top: 5rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+body .bg-img .bg-img-body a:hover {
+  background-color: cornflowerblue;
+  color: #fff;
+}
+
 body .bg-img::before {
   content: "";
   background: black;
@@ -200,5 +294,222 @@ body .bg-img::before {
   width: 100%;
   height: 100%;
   opacity: 0.3;
+}
+
+body .introduction {
+  margin-bottom: 30rem;
+}
+
+body .introduction .section-part {
+  padding: 0 15rem;
+}
+
+body .introduction .section-part .part-icon {
+  font-size: 25rem;
+  color: red;
+  margin: 15rem 0 5rem 0;
+}
+
+body .introduction .section-part .part-info p:first-child {
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 5rem;
+}
+
+body .profile .section-part {
+  padding: 20rem 0;
+}
+
+body .profile .section-part i {
+  font-size: 30rem;
+}
+
+body .profile .section-part p, body .profile .section-part span {
+  font-size: 15rem;
+  margin-top: 5rem;
+}
+
+body .working-process .section-part {
+  padding: 0 15rem;
+}
+
+body .working-process .section-part i {
+  font-size: 30rem;
+  color: #fff;
+  background-color: #333;
+  padding: 10rem;
+  border-radius: 50%;
+  margin-bottom: 7rem;
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body .working-process .section-part i::after {
+  content: "1";
+  font-size: 12rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .working-process .section-part i:hover {
+  background-color: red;
+}
+
+body .working-process .section-part i:hover::after {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: #333;
+}
+
+body .working-process .section-part p {
+  font-weight: 700;
+  margin: 5rem 0;
+}
+
+body footer {
+  padding: 15rem 0;
+  background-color: #333;
+  margin-top: 15rem;
+}
+
+body footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer .container .foot-left {
+  color: #fff;
+}
+
+body footer .container .foot-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body footer .container .foot-nav ul i {
+  color: #fff;
+  padding: 5rem;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-left: 10rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+body footer .container .foot-nav ul i:hover {
+  background-color: red;
+}
+
+body .about-me .section-parts .part-1 {
+  width: 30%;
+}
+
+body .about-me .section-parts .part-1 img {
+  width: 100%;
+}
+
+body .about-me .section-parts .part-2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 10rem 40rem;
+}
+
+body .about-me .section-parts .part-2 h5 {
+  font-weight: 700;
+  margin-bottom: 5rem;
+}
+
+body .about-me .section-parts .part-2 p {
+  line-height: 1.4;
+}
+
+body .what-i-know {
+  margin-top: 30px;
+  padding: 10rem 0;
+  background-color: #333;
+}
+
+body .what-i-know .section-title {
+  color: #fff;
+  margin-bottom: 15rem;
+}
+
+body .what-i-know p {
+  color: #fff;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+body .what-i-know .progress-bar {
+  margin-bottom: 40px;
+  width: 100%;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 5px;
+  position: relative;
+}
+
+body .what-i-know .web-development::before {
+  content: "";
+  position: absolute;
+  z-index: 333;
+  width: 100%;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #ef6d6d;
+}
+
+body .what-i-know .mobile-app::before {
+  content: "";
+  position: absolute;
+  z-index: 333;
+  width: 75%;
+  height: 20px;
+  border-radius: 5px;
+  background: #ef6d6d;
+}
+
+body .what-i-know .data-science::before {
+  content: "";
+  position: absolute;
+  z-index: 333;
+  width: 55%;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #ef6d6d;
+}
+
+body .what-i-know .machine-learning::before {
+  content: "";
+  position: absolute;
+  z-index: 333;
+  width: 85%;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #ef6d6d;
 }
 /*# sourceMappingURL=main.css.map */
