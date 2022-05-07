@@ -163,6 +163,8 @@ body {
   /* ************* FOOTER ************* */
   /* ******************* ABOUT.HTML ********************* */
   /* ******************WHAT I KNOW ***************** */
+  /* ****************** PROJECTS.html ***************** */
+  /* ****************** CONTACT.html ***************** */
 }
 
 body header {
@@ -511,5 +513,136 @@ body .what-i-know .machine-learning::before {
   height: 20px;
   border-radius: 5px;
   background-color: #ef6d6d;
+}
+
+body .references .reference-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .references .reference-images .img {
+  width: 25%;
+  padding: 25rem;
+}
+
+body .references .reference-images .img img {
+  width: 100%;
+}
+
+body .references .section-parts {
+  margin-top: 15rem;
+}
+
+body .references .section-parts .section-part {
+  margin-right: 5rem;
+}
+
+body .references .section-parts .section-part .reference-text {
+  border: 1px solid #ddd;
+  margin-bottom: 5rem;
+  border-radius: 4px;
+  padding: 3rem;
+}
+
+body .references .section-parts .section-part .reference-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .references .section-parts .section-part .reference-info img {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 5rem;
+}
+
+body .my-projects .section-parts {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 10rem;
+}
+
+body .my-projects .section-parts .project-part .project-img img {
+  width: 100%;
+}
+
+body .my-projects .section-parts .project-part .project-text {
+  background-color: #ddd;
+  padding: 10rem;
+  color: #000;
+}
+
+body .my-projects .section-parts .project-part .project-text p {
+  font-weight: 700;
+  font-size: 15rem;
+  margin-top: 5rem;
+}
+
+body .form form div {
+  width: 100%;
+  margin-bottom: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .form form div input {
+  width: 48%;
+  padding: 3rem;
+  border-radius: 3px;
+  border: 2px solid #ddd;
+}
+
+body .form form div textarea {
+  width: 100%;
+  resize: none;
+  border: 2px solid #ddd;
+  padding: 5rem;
+}
+
+body .form form a {
+  background: #333;
+  color: #fff;
+  padding: 5rem;
+  border-radius: 4px;
+}
+
+body .last-info {
+  background-color: red;
+  width: 100%;
+  padding: 35rem 0;
+  margin-top: 50rem;
+}
+
+body .last-info .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .last-info .icons .icon {
+  color: #fff;
+}
+
+body .last-info .icons .icon p {
+  margin: 5rem 0;
+}
+
+body .last-foot {
+  margin-top: 0 !important;
 }
 /*# sourceMappingURL=main.css.map */
